@@ -25,6 +25,7 @@
 	"mixins": [
 		"esromes_apocalypse.mixins.json"
 	],
+	"accessWidener": "esromes_apocalypse.accesswidener",
 	"depends": {
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
