@@ -58,15 +58,11 @@
     ],
     [],
     [
-      "minecraft:spring_water",
       "minecraft:spring_lava"
     ],
     [
       "minecraft:glow_lichen",
       "minecraft:patch_dead_bush_2"
-    ],
-    [
-      "minecraft:freeze_top_layer"
     ]
   ],
   "has_precipitation": true,
@@ -85,12 +81,6 @@
     "misc": [],
     "monster": [
       {
-        "type": "minecraft:husk",
-        "maxCount": 8,
-        "minCount": 4,
-        "weight": 5
-      },
-      {
         "type": "minecraft:spider",
         "maxCount": 4,
         "minCount": 4,
@@ -100,13 +90,13 @@
         "type": "minecraft:zombie",
         "maxCount": 4,
         "minCount": 4,
-        "weight": 95
+        "weight": 20
       },
       {
         "type": "minecraft:zombie_villager",
         "maxCount": 1,
         "minCount": 1,
-        "weight": 5
+        "weight": 0
       },
       {
         "type": "minecraft:skeleton",
@@ -137,6 +127,12 @@
         "maxCount": 1,
         "minCount": 1,
         "weight": 5
+      },
+      {
+        "type": "minecraft:husk",
+        "maxCount": 8,
+        "minCount": 4,
+        "weight": 150
       }
     ],
     "underground_water_creature": [

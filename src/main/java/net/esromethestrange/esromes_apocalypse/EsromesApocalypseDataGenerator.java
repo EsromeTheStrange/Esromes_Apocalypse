@@ -1,5 +1,8 @@
 package net.esromethestrange.esromes_apocalypse;
 
+import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseBiomeTagProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseEntityTagProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseWorldPresetTagProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseWorldProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.lang.ApocalypseEnglishLanguageProvider;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseChunkGeneratorSettings;
@@ -16,6 +19,10 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ApocalypseEnglishLanguageProvider::new);
+
+		pack.addProvider(ApocalypseBiomeTagProvider::new);
+		pack.addProvider(ApocalypseEntityTagProvider::new);
+		pack.addProvider(ApocalypseWorldPresetTagProvider::new);
 
 		pack.addProvider(ApocalypseWorldProvider::new);
 	}

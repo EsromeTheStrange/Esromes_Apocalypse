@@ -332,7 +332,7 @@
     }
   },
   "ore_veins_enabled": true,
-  "sea_level": 63,
+  "sea_level": 65,
   "spawn_target": [
     {
       "continentalness": [
@@ -408,16 +408,38 @@
       {
         "type": "minecraft:condition",
         "if_true": {
-          "type": "minecraft:stone_depth",
-          "add_surface_depth": true,
-          "offset": 0,
-          "secondary_depth_range": 0,
-          "surface_type": "floor"
+          "type": "minecraft:vertical_gradient",
+          "false_at_and_above": {
+            "absolute": 8
+          },
+          "random_name": "minecraft:deepslate",
+          "true_at_and_below": {
+            "absolute": 0
+          }
+        },
+        "then_run": {
+          "type": "minecraft:block",
+          "result_state": {
+            "Name": "minecraft:deepslate",
+            "Properties": {
+              "axis": "y"
+            }
+          }
+        }
+      },
+      {
+        "type": "minecraft:condition",
+        "if_true": {
+          "type": "minecraft:above_preliminary_surface"
         },
         "then_run": {
           "type": "minecraft:condition",
           "if_true": {
-            "type": "minecraft:above_preliminary_surface"
+            "type": "minecraft:stone_depth",
+            "add_surface_depth": true,
+            "offset": 0,
+            "secondary_depth_range": 0,
+            "surface_type": "floor"
           },
           "then_run": {
             "type": "minecraft:block",

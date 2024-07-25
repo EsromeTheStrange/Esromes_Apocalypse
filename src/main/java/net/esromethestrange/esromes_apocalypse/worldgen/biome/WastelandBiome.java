@@ -1,7 +1,5 @@
 package net.esromethestrange.esromes_apocalypse.worldgen.biome;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -13,14 +11,12 @@ import net.minecraft.world.biome.SpawnSettings;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 public class WastelandBiome {
-    public static final Block SURFACE_BLOCK = Blocks.COARSE_DIRT;
-
     public static Biome generate(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
-        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.HUSK, 5, 4, 8));
-
-        DefaultBiomeFeatures.addBatsAndMonsters(spawnBuilder);
+        DefaultBiomeFeatures.addCaveMobs(spawnBuilder);
+        DefaultBiomeFeatures.addMonsters(spawnBuilder, 20, 0, 100, false);
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.HUSK, 150, 4, 8));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),

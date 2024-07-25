@@ -7,7 +7,9 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.GenerationSettings;
+import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
+import net.minecraft.world.gen.feature.MiscPlacedFeatures;
 
 public class ApocalypseBiomes {
     public static final RegistryKey<Biome> WASTELAND = RegistryKey.of(RegistryKeys.BIOME,
@@ -22,7 +24,7 @@ public class ApocalypseBiomes {
         DefaultBiomeFeatures.addAmethystGeodes(builder);
         DefaultBiomeFeatures.addDungeons(builder);
         DefaultBiomeFeatures.addMineables(builder);
-        DefaultBiomeFeatures.addSprings(builder);
-        DefaultBiomeFeatures.addFrozenTopLayer(builder);
+
+        builder.feature(GenerationStep.Feature.FLUID_SPRINGS, MiscPlacedFeatures.SPRING_LAVA);
     }
 }

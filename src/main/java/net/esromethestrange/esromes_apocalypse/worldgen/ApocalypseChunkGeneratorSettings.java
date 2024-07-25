@@ -5,9 +5,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.util.VanillaBiomeParameters;
 import net.minecraft.world.gen.chunk.ChunkGeneratorSettings;
 import net.minecraft.world.gen.chunk.GenerationShapeConfig;
@@ -33,7 +31,7 @@ public class ApocalypseChunkGeneratorSettings {
             ),
             ApocalypseSurfaceRules.createOverworldSurfaceRule(),
             new VanillaBiomeParameters().getSpawnSuitabilityNoises(),
-            63, //sea level
+            65, //sea level, default is 63
             false, //mob generation disabled
             true, //aquifers
             true, //ore veins

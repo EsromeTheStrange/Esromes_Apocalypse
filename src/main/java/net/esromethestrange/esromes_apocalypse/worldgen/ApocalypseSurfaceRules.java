@@ -9,18 +9,22 @@ import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 
 public class ApocalypseSurfaceRules {
     private static final MaterialRules.MaterialRule BEDROCK = makeRule(Blocks.BEDROCK);
+    private static final MaterialRules.MaterialRule DEEPSLATE = makeRule(Blocks.DEEPSLATE);
     private static final MaterialRules.MaterialRule COARSE_DIRT = makeRule(Blocks.COARSE_DIRT);
 
+    /** This gets the top couple blocks of the floor (like dirt in vanilla). */
     private static final MaterialRules.MaterialCondition IS_FLOOR = MaterialRules.stoneDepth(0, true, VerticalSurfaceType.FLOOR);
+    /** This limits the selection to only the surface of the world (like how dirt and grass don't place in caves). */
     private static final MaterialRules.MaterialCondition ON_SURFACE = MaterialRules.surface();
 
     public static MaterialRules.MaterialRule createOverworldSurfaceRule(){
         ImmutableList.Builder<MaterialRules.MaterialRule> builder = ImmutableList.builder();
 
         builder.add(MaterialRules.condition(MaterialRules.verticalGradient("bedrock_floor", YOffset.getBottom(), YOffset.aboveBottom(5)), BEDROCK));
+        builder.add(MaterialRules.condition(MaterialRules.verticalGradient("deepslate", YOffset.fixed(0), YOffset.fixed(8)), DEEPSLATE));
 
-        builder.add(MaterialRules.condition(IS_FLOOR,
-                MaterialRules.condition(ON_SURFACE, COARSE_DIRT)
+        builder.add(MaterialRules.condition(ON_SURFACE,
+                MaterialRules.condition(IS_FLOOR, COARSE_DIRT)
         ));
 
         return MaterialRules.sequence(builder.build().toArray(MaterialRules.MaterialRule[]::new));
