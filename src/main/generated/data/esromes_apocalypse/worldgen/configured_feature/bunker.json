@@ -1,0 +1,11 @@
+{
+  "type": "esromes_apocalypse:bunker",
+  "config": {
+    "id": "esromes_apocalypse:bunker",
+    "placement_offset": [
+      -3,
+      -8,
+      -7
+    ]
+  }
+}

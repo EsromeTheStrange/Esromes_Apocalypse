@@ -31,7 +31,7 @@ public class ApocalypseChunkGeneratorSettings {
             ),
             ApocalypseSurfaceRules.createOverworldSurfaceRule(),
             new VanillaBiomeParameters().getSpawnSuitabilityNoises(),
-            65, //sea level, default is 63
+            63, //sea level, default is 63
             false, //mob generation disabled
             true, //aquifers
             true, //ore veins

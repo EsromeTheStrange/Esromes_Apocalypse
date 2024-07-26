@@ -1,4 +1,5 @@
-// 1.21	2024-07-25T21:51:04.5137168	Esrome's Apocalypse/World Generation
-8d35f702ff2fbb6d3dff98a61e0e3f8df747b109 data\esromes_apocalypse\worldgen\noise_settings\wasteland.json
+// 1.21	2024-07-26T14:38:26.8580946	Esrome's Apocalypse/World Generation
+b0b9ec8e891b4e29719693d73fe9b0bdf1614b3c data\esromes_apocalypse\worldgen\noise_settings\wasteland.json
 e2b0df86dd5703ece60be105c36dcc360c8ebec6 data\esromes_apocalypse\worldgen\world_preset\wasteland.json
 a9204c77e0c7f3e30546c82ae31cdfe2183963c1 data\esromes_apocalypse\worldgen\biome\wasteland.json
+b99b396a1b7edced48b5ca0dde93ebc63900997d data\esromes_apocalypse\worldgen\configured_feature\bunker.json

@@ -3,7 +3,8 @@
   "package": "net.esromethestrange.esromes_apocalypse.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "EsromesApocalypseHostileEntityMixin"
+    "EsromesApocalypseHostileEntityMixin",
+    "EsromesApocalypseMinecraftServerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
