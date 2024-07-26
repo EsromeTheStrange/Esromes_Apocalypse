@@ -17,7 +17,9 @@ public class ApocalypseWorldProvider extends FabricDynamicRegistryProvider {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CHUNK_GENERATOR_SETTINGS));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.WORLD_PRESET));
-        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
+
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.TEMPLATE_POOL));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.STRUCTURE));
     }
 
     @Override public String getName() { return "World Generation"; }

@@ -1,4 +1,4 @@
-package net.esromethestrange.esromes_apocalypse.worldgen.structure;
+package net.esromethestrange.esromes_apocalypse.worldgen.structure.bunker;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

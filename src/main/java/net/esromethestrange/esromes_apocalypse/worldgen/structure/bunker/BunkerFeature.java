@@ -1,12 +1,10 @@
-package net.esromethestrange.esromes_apocalypse.worldgen.structure;
+package net.esromethestrange.esromes_apocalypse.worldgen.structure.bunker;
 
 import com.mojang.serialization.Codec;
-import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
 import net.minecraft.structure.StructurePlacementData;
 import net.minecraft.structure.StructureTemplate;
 import net.minecraft.structure.StructureTemplateManager;
 import net.minecraft.util.BlockRotation;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.ChunkPos;
