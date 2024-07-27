@@ -8,6 +8,8 @@ import net.esromethestrange.esromes_apocalypse.datagen.lang.ApocalypseEnglishLan
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseChunkGeneratorSettings;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseWorldPresets;
 import net.esromethestrange.esromes_apocalypse.worldgen.biome.ApocalypseBiomes;
+import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseConfiguredFeatures;
+import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypsePlacedFeatures;
 import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseStructurePools;
 import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseStructures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -37,5 +39,7 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 
 		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ApocalypseStructurePools::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ApocalypseStructures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ApocalypsePlacedFeatures::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ApocalypseConfiguredFeatures::bootstrap);
 	}
 }

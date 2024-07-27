@@ -22,6 +22,7 @@ public class ApocalypseStructures {
     public static final RegistryKey<Structure> BUNKER = RegistryKey.of(RegistryKeys.STRUCTURE,
             Identifier.of(EsromesApocalypse.MOD_ID, "bunker"));
 
+
     public static void bootstrap(Registerable<Structure> context){
         RegistryEntryLookup<StructurePool> structurePoolLookup = context.getRegistryLookup(RegistryKeys.TEMPLATE_POOL);
 

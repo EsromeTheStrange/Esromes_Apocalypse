@@ -62,7 +62,8 @@
     ],
     [
       "minecraft:glow_lichen",
-      "minecraft:patch_dead_bush_2"
+      "minecraft:patch_dead_bush_2",
+      "esromes_apocalypse:tree/trees_oak"
     ]
   ],
   "has_precipitation": true,

@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.worldgen.biome;
 
+import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypsePlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.registry.Registerable;
@@ -8,6 +9,7 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeEffects;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.biome.SpawnSettings;
+import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 
 public class WastelandBiome {
@@ -28,6 +30,8 @@ public class WastelandBiome {
 
         //Vegetal Decoration
         DefaultBiomeFeatures.addDesertDeadBushes(biomeBuilder);
+
+        biomeBuilder.feature(GenerationStep.Feature.VEGETAL_DECORATION, ApocalypsePlacedFeatures.TREES_OAK);
 
         return new Biome.Builder()
                 .precipitation(true)

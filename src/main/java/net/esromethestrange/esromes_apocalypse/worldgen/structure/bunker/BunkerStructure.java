@@ -13,14 +13,10 @@ import net.minecraft.structure.pool.StructurePools;
 import net.minecraft.util.Identifier;
 
 public class BunkerStructure {
-    public static final RegistryKey<StructurePool> BUNKER_CAP = RegistryKey.of(RegistryKeys.TEMPLATE_POOL,
-            Identifier.of(EsromesApocalypse.MOD_ID, "bunker/bunker_cap"));
-    public static final RegistryKey<StructurePool> BUNKER_LADDER = RegistryKey.of(RegistryKeys.TEMPLATE_POOL,
-            Identifier.of(EsromesApocalypse.MOD_ID, "bunker/bunker_ladder"));
-    public static final RegistryKey<StructurePool> BUNKER = RegistryKey.of(RegistryKeys.TEMPLATE_POOL,
-            Identifier.of(EsromesApocalypse.MOD_ID, "bunker/bunker"));;
-    public static final RegistryKey<StructurePool> BUNKER_ROOMS = RegistryKey.of(RegistryKeys.TEMPLATE_POOL,
-            Identifier.of(EsromesApocalypse.MOD_ID, "bunker/bunker_rooms"));
+    public static final RegistryKey<StructurePool> BUNKER = makeKey("bunker/bunker");
+    public static final RegistryKey<StructurePool> BUNKER_CAP = makeKey("bunker/bunker_cap");
+    public static final RegistryKey<StructurePool> BUNKER_LADDER = makeKey("bunker/bunker_ladder");
+    public static final RegistryKey<StructurePool> BUNKER_ROOMS = makeKey("bunker/bunker_rooms");
 
 
     public static void bootstrap(Registerable<StructurePool> context){
@@ -56,5 +52,9 @@ public class BunkerStructure {
                         StructurePool.Projection.RIGID
                 )
         );
+    }
+
+    public static RegistryKey<StructurePool> makeKey(String name){
+        return RegistryKey.of(RegistryKeys.TEMPLATE_POOL, Identifier.of(EsromesApocalypse.MOD_ID, name));
     }
 }
