@@ -17,16 +17,14 @@ import net.minecraft.world.gen.placementmodifier.SquarePlacementModifier;
 import net.minecraft.world.gen.placementmodifier.SurfaceWaterDepthFilterPlacementModifier;
 
 public class ApocalypsePlacedFeatures {
-    public static final RegistryKey<PlacedFeature> TREES_OAK = makeKey("tree/trees_oak");
-    public static final RegistryKey<PlacedFeature> TREE_OAK_1 = makeKey("tree/oak_1");
-    public static final RegistryKey<PlacedFeature> TREE_OAK_2 = makeKey("tree/oak_2");
+    public static final RegistryKey<PlacedFeature> TREES_OAK = makeKey("tree/wasteland_trees");
+    public static final RegistryKey<PlacedFeature> TREE_OAK_1 = makeKey("tree/oak");
 
     public static void bootstrap(Registerable<PlacedFeature> context){
         RegistryEntryLookup<ConfiguredFeature<?, ?>> configuredFeatureLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
 
-        registerTreeGroup(context, TREES_OAK, configuredFeatureLookup.getOrThrow(ApocalypseConfiguredFeatures.TREES_OAK));
-        registerTree(context, TREE_OAK_1, configuredFeatureLookup.getOrThrow(ApocalypseConfiguredFeatures.TREE_OAK_1));
-        registerTree(context, TREE_OAK_2, configuredFeatureLookup.getOrThrow(ApocalypseConfiguredFeatures.TREE_OAK_2));
+        registerTreeGroup(context, TREES_OAK, configuredFeatureLookup.getOrThrow(ApocalypseConfiguredFeatures.WASTELAND_TREES));
+        registerTree(context, TREE_OAK_1, configuredFeatureLookup.getOrThrow(ApocalypseConfiguredFeatures.TREE_OAK));
     }
 
 

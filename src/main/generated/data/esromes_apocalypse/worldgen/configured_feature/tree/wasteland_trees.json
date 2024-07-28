@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "esromes_apocalypse:tree/oak",
+    "features": []
+  }
+}

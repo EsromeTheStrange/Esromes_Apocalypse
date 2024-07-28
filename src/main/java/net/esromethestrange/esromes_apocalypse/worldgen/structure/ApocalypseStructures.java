@@ -1,7 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.worldgen.structure;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
-import net.esromethestrange.esromes_apocalypse.worldgen.structure.bunker.BunkerStructure;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;

@@ -1,4 +1,4 @@
-package net.esromethestrange.esromes_apocalypse.worldgen.structure.bunker;
+package net.esromethestrange.esromes_apocalypse.worldgen.structure;
 
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
@@ -47,7 +47,8 @@ public class BunkerStructure {
                 new StructurePool(
                         structurePoolLookup.getOrThrow(StructurePools.EMPTY),
                         ImmutableList.of(
-                                Pair.of(StructurePoolElement.ofSingle(EsromesApocalypse.MOD_ID + ":bunker/bunker_study"), 1)
+                                Pair.of(StructurePoolElement.ofSingle(EsromesApocalypse.MOD_ID + ":bunker/bunker_study"), 1),
+                                Pair.of(StructurePoolElement.ofSingle(EsromesApocalypse.MOD_ID + ":bunker/bunker_gallery"), 1)
                         ),
                         StructurePool.Projection.RIGID
                 )
