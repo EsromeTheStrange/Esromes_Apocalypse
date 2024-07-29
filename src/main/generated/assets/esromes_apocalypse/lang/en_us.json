@@ -1,3 +1,5 @@
 {
+  "death.attack.acid_rain": "%1$s couldn't find cover from the acid rain",
+  "death.attack.acid_rain.player": "%1$s melted in the rain while fighting %2$s",
   "generator.esromes_apocalypse.wasteland": "Wasteland"
 }

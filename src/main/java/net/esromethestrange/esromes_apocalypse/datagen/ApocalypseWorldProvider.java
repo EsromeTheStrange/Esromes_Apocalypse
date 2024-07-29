@@ -23,6 +23,8 @@ public class ApocalypseWorldProvider extends FabricDynamicRegistryProvider {
 
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.TEMPLATE_POOL));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.STRUCTURE));
+
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DAMAGE_TYPE));
     }
 
     @Override public String getName() { return "World Generation"; }

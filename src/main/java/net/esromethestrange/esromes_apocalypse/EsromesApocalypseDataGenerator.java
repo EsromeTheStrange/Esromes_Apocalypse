@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse;
 
+import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseBiomeTagProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseEntityTagProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.tag.ApocalypseWorldPresetTagProvider;
@@ -39,7 +40,10 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 
 		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ApocalypseStructurePools::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ApocalypseStructures::bootstrap);
+
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ApocalypsePlacedFeatures::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ApocalypseConfiguredFeatures::bootstrap);
+
+		registryBuilder.addRegistry(RegistryKeys.DAMAGE_TYPE, ApocalypseDamageTypes::bootstrap);
 	}
 }

@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.entity.EntityType;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.EntityTypeTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,5 +20,11 @@ public class ApocalypseEntityTagProvider extends FabricTagProvider<EntityType<?>
         getOrCreateTagBuilder(ApocalypseTags.Entity.DAYTIME_MONSTERS).add(
                 EntityType.HUSK
         );
+        getOrCreateTagBuilder(ApocalypseTags.Entity.ACID_RAIN_IMMUNE).add(
+                EntityType.SPIDER,
+                EntityType.CAVE_SPIDER,
+                EntityType.CREEPER,
+                EntityType.SLIME
+        ).addOptionalTag(EntityTypeTags.UNDEAD);
     }
 }

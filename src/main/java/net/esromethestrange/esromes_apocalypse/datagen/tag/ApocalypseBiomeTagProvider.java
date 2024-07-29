@@ -25,8 +25,6 @@ public class ApocalypseBiomeTagProvider extends FabricTagProvider<Biome> {
         getOrCreateTagBuilder(BiomeTags.WITHOUT_PATROL_SPAWNS).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);
         getOrCreateTagBuilder(BiomeTags.WITHOUT_WANDERING_TRADER_SPAWNS).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);
 
-        getOrCreateTagBuilder(BiomeTags.OCEAN_MONUMENT_HAS_STRUCTURE).addTag(
-                ApocalypseTags.Biome.WASTELAND_BIOMES
-        );
+        getOrCreateTagBuilder(BiomeTags.OCEAN_MONUMENT_HAS_STRUCTURE).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);
     }
 }

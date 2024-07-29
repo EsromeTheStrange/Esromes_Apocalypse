@@ -35,6 +35,7 @@ public class ApocalypsePlacedFeatures {
     public static void registerTreeGroup(Registerable<PlacedFeature> context, RegistryKey<PlacedFeature> placedFeature, RegistryEntry<ConfiguredFeature<?, ?>> configuredFeature){
         context.register(placedFeature,
                 new PlacedFeature(configuredFeature, ImmutableList.of(
+                        PlacedFeatures.createCountExtraModifier(0, 0.1F, 1),
                         SquarePlacementModifier.of(),
                         SurfaceWaterDepthFilterPlacementModifier.of(0),
                         PlacedFeatures.OCEAN_FLOOR_HEIGHTMAP,

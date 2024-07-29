@@ -17,8 +17,9 @@ public class ApocalypseTags {
     }
 
     public static class Entity {
-        public static final TagKey<EntityType<?>> DAYTIME_MONSTERS =
-                createTag("daytime_monsters");
+        public static final TagKey<EntityType<?>> DAYTIME_MONSTERS = createTag("daytime_monsters");
+        public static final TagKey<EntityType<?>> ACID_RAIN_IMMUNE = createTag("acid_rain_immune");
+        public static final TagKey<EntityType<?>> ACID_RAIN_EXTRA = createTag("acid_rain_extra");
 
         private static TagKey<EntityType<?>> createTag(String name) {
             return TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(EsromesApocalypse.MOD_ID, name));

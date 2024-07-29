@@ -31,6 +31,7 @@ public abstract class EsromesApocalypseMinecraftServerMixin {
         if(!serverWorld.getBiome(saveProperties.getMainWorldProperties().getSpawnPos()).isIn(ApocalypseTags.Biome.WASTELAND_BIOMES))
             return;
 
+        //TODO Look at this code again and see if there's a better way
         Structure structure = serverWorld.getRegistryManager().get(RegistryKeys.STRUCTURE).getOrThrow(ApocalypseStructures.BUNKER);
         ChunkGenerator chunkGenerator = serverWorld.getChunkManager().getChunkGenerator();
         StructureStart structureStart = structure.createStructureStart(

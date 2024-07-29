@@ -1,0 +1,12 @@
+{
+  "values": [
+    "minecraft:spider",
+    "minecraft:cave_spider",
+    "minecraft:creeper",
+    "minecraft:slime",
+    {
+      "id": "#minecraft:undead",
+      "required": false
+    }
+  ]
+}
