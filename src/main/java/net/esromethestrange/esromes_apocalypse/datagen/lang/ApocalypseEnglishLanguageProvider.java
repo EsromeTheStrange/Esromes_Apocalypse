@@ -28,6 +28,9 @@ public class ApocalypseEnglishLanguageProvider extends FabricLanguageProvider {
         addDamageTranslation(translationBuilder, ApocalypseDamageTypes.ACID_RAIN,
                 "%1$s couldn't find cover from the acid rain",
                 "%1$s melted in the rain while fighting %2$s");
+        addDamageTranslation(translationBuilder, ApocalypseDamageTypes.ACID_FLUID,
+                "%1$s fell in a pool of acid",
+                "%1$s was pushed into a pool of acid by %2$s");
     }
 
     public static void addDamageTranslation(TranslationBuilder translationBuilder, RegistryKey<DamageType> damageType,

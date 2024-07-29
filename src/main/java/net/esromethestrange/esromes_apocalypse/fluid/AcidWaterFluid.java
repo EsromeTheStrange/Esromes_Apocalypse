@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.fluid;
 
+import net.esromethestrange.esromes_apocalypse.data.ApocalypseTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
@@ -100,7 +101,7 @@ public abstract class AcidWaterFluid extends FlowableFluid {
 
     @Override
     public boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return direction == Direction.DOWN && !fluid.isIn(FluidTags.WATER);
+        return direction == Direction.DOWN && !fluid.isIn(ApocalypseTags.Fluid.ACID);
     }
 
     @Override

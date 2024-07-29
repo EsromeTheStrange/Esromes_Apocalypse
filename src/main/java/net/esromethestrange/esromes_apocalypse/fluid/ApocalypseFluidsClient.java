@@ -12,7 +12,7 @@ public class ApocalypseFluidsClient {
 
     public static void clientInitialize(){
         FluidRenderHandlerRegistry.INSTANCE.register(ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING, new SimpleFluidRenderHandler(
-                STILL_TEXTURE, FLOWING_TEXTURE, 0x8cc27a
+                STILL_TEXTURE, FLOWING_TEXTURE, 0xa9ba5f
         ));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING);

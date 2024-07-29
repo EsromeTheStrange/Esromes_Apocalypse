@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.datagen.tag;
 
+import net.esromethestrange.esromes_apocalypse.data.ApocalypseTags;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -17,8 +18,12 @@ public class ApocalypseFluidTagProvider extends FabricTagProvider<Fluid> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(FluidTags.WATER).add(
-                ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING
-        );
+        getOrCreateTagBuilder(ApocalypseTags.Fluid.ACID_WATER).add(ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING);
+
+        getOrCreateTagBuilder(ApocalypseTags.Fluid.ACID)
+                .addTag(ApocalypseTags.Fluid.ACID_WATER);
+
+        getOrCreateTagBuilder(FluidTags.WATER)
+                .addTag(ApocalypseTags.Fluid.ACID_WATER);
     }
 }

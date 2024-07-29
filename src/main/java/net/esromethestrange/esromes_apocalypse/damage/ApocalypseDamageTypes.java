@@ -10,8 +10,14 @@ import net.minecraft.util.Identifier;
 
 public class ApocalypseDamageTypes {
     public static final RegistryKey<DamageType> ACID_RAIN = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(EsromesApocalypse.MOD_ID, "acid_rain"));
+    public static final RegistryKey<DamageType> ACID_FLUID = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(EsromesApocalypse.MOD_ID, "acid_fluid"));
 
     public static void bootstrap(Registerable<DamageType> context){
-        context.register(ACID_RAIN, new DamageType("acid_rain", 0.0F, DamageEffects.BURNING));
+        createDamageType(context, ACID_RAIN, 0.0f, DamageEffects.BURNING);
+        createDamageType(context, ACID_FLUID, 0.0f, DamageEffects.BURNING);
+    }
+
+    public static void createDamageType(Registerable<DamageType> context, RegistryKey<DamageType> damageType, float exhaustion, DamageEffects damageEffects){
+        context.register(damageType, new DamageType(damageType.getValue().getPath(), exhaustion, damageEffects));
     }
 }

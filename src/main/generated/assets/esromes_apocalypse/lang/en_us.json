@@ -1,5 +1,7 @@
 {
   "block.esromes_apocalypse.acidic_water": "Acidic Water",
+  "death.attack.acid_fluid": "%1$s fell in a pool of acid",
+  "death.attack.acid_fluid.player": "%1$s was pushed into a pool of acid by %2$s",
   "death.attack.acid_rain": "%1$s couldn't find cover from the acid rain",
   "death.attack.acid_rain.player": "%1$s melted in the rain while fighting %2$s",
   "generator.esromes_apocalypse.wasteland": "Wasteland",

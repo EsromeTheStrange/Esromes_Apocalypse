@@ -3,9 +3,10 @@
   "package": "net.esromethestrange.esromes_apocalypse.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EsromesApocalypseEntityMixin",
     "EsromesApocalypseHostileEntityMixin",
-    "EsromesApocalypseMinecraftServerMixin",
-    "EsromesApocalypseLivingEntityMixin"
+    "EsromesApocalypseLivingEntityMixin",
+    "EsromesApocalypseMinecraftServerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

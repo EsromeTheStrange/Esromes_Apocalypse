@@ -21,6 +21,7 @@ public class ApocalypseBiomeTagProvider extends FabricTagProvider<Biome> {
         getOrCreateTagBuilder(ApocalypseTags.Biome.WASTELAND_BIOMES).add(
                 ApocalypseBiomes.WASTELAND
         );
+        getOrCreateTagBuilder(ApocalypseTags.Biome.HAS_ACID_RAIN).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);
 
         getOrCreateTagBuilder(BiomeTags.WITHOUT_PATROL_SPAWNS).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);
         getOrCreateTagBuilder(BiomeTags.WITHOUT_WANDERING_TRADER_SPAWNS).addTag(ApocalypseTags.Biome.WASTELAND_BIOMES);

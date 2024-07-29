@@ -20,11 +20,17 @@ public class ApocalypseEntityTagProvider extends FabricTagProvider<EntityType<?>
         getOrCreateTagBuilder(ApocalypseTags.Entity.DAYTIME_MONSTERS).add(
                 EntityType.HUSK
         );
-        getOrCreateTagBuilder(ApocalypseTags.Entity.ACID_RAIN_IMMUNE).add(
+
+        getOrCreateTagBuilder(ApocalypseTags.Entity.ACID_IMMUNE).add(
                 EntityType.SPIDER,
                 EntityType.CAVE_SPIDER,
                 EntityType.CREEPER,
                 EntityType.SLIME
         ).addOptionalTag(EntityTypeTags.UNDEAD);
+
+        getOrCreateTagBuilder(ApocalypseTags.Entity.ACID_EXTRA).add(
+                EntityType.IRON_GOLEM,
+                EntityType.SHULKER
+        );
     }
 }
