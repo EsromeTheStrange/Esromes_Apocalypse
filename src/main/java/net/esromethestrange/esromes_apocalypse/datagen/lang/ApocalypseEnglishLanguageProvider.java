@@ -2,6 +2,7 @@ package net.esromethestrange.esromes_apocalypse.datagen.lang;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
 import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
+import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.entity.damage.DamageType;
@@ -17,6 +18,11 @@ public class ApocalypseEnglishLanguageProvider extends FabricLanguageProvider {
 
     @Override
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
+        translationBuilder.add("itemGroup." + EsromesApocalypse.MOD_ID, "Esrome's Apocalypse");
+
+        translationBuilder.add(ApocalypseFluids.ACID_WATER_BLOCK, "Acidic Water");
+        translationBuilder.add(ApocalypseFluids.ACID_WATER_BUCKET, "Bucket of Acidic Water");
+
         translationBuilder.add("generator." + EsromesApocalypse.MOD_ID + ".wasteland", "Wasteland");
 
         addDamageTranslation(translationBuilder, ApocalypseDamageTypes.ACID_RAIN,

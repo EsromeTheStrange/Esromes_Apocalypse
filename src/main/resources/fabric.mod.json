@@ -18,6 +18,9 @@
 		"main": [
 			"net.esromethestrange.esromes_apocalypse.EsromesApocalypse"
 		],
+		"client": [
+			"net.esromethestrange.esromes_apocalypse.EsromesApocalypseClient"
+		],
 		"fabric-datagen": [
 			"net.esromethestrange.esromes_apocalypse.EsromesApocalypseDataGenerator"
 		]

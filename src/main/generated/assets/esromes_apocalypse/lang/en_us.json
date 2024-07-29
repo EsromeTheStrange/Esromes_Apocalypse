@@ -1,5 +1,8 @@
 {
+  "block.esromes_apocalypse.acidic_water": "Acidic Water",
   "death.attack.acid_rain": "%1$s couldn't find cover from the acid rain",
   "death.attack.acid_rain.player": "%1$s melted in the rain while fighting %2$s",
-  "generator.esromes_apocalypse.wasteland": "Wasteland"
+  "generator.esromes_apocalypse.wasteland": "Wasteland",
+  "item.esromes_apocalypse.acidic_water_bucket": "Bucket of Acidic Water",
+  "itemGroup.esromes_apocalypse": "Esrome's Apocalypse"
 }

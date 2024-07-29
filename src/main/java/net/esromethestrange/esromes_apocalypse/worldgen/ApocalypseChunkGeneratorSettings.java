@@ -1,6 +1,7 @@
 package net.esromethestrange.esromes_apocalypse.worldgen;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
+import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -23,7 +24,7 @@ public class ApocalypseChunkGeneratorSettings {
         return new ChunkGeneratorSettings(
             GenerationShapeConfig.create(-64, 384, 1, 2),
             Blocks.STONE.getDefaultState(),
-            Blocks.WATER.getDefaultState(),
+            ApocalypseFluids.ACID_WATER_BLOCK.getDefaultState(),
             DensityFunctions.createSurfaceNoiseRouter(
                     context.getRegistryLookup(RegistryKeys.DENSITY_FUNCTION),
                     context.getRegistryLookup(RegistryKeys.NOISE_PARAMETERS),
