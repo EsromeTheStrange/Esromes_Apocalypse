@@ -18,10 +18,7 @@ public class ApocalypseEntityTagProvider extends FabricTagProvider<EntityType<?>
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ApocalypseTags.Entity.DAYTIME_MONSTERS).add(
-                ApocalypseEntityTypes.CORRODED,
-                EntityType.HUSK
-        );
+        getOrCreateTagBuilder(ApocalypseTags.Entity.DAYTIME_MONSTERS).addTag(EntityTypeTags.ZOMBIES);
 
         getOrCreateTagBuilder(ApocalypseTags.Entity.ACID_IMMUNE).add(
                 EntityType.SPIDER,

@@ -4,7 +4,7 @@
     "Name": "minecraft:stone"
   },
   "default_fluid": {
-    "Name": "esromes_apocalypse:acidic_water",
+    "Name": "esromes_apocalypse:contaminated_water",
     "Properties": {
       "level": "0"
     }
@@ -444,7 +444,7 @@
           "then_run": {
             "type": "minecraft:block",
             "result_state": {
-              "Name": "minecraft:coarse_dirt"
+              "Name": "esromes_apocalypse:contaminated_dirt"
             }
           }
         }

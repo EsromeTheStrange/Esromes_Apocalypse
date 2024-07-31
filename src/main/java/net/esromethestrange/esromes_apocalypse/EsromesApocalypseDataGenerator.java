@@ -1,10 +1,12 @@
 package net.esromethestrange.esromes_apocalypse;
 
-import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseModelProvider;
-import net.esromethestrange.esromes_apocalypse.datagen.tag.*;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseWorldProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.lang.ApocalypseEnglishLanguageProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.loot_table.ApocalypseBlockLootTableProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.loot_table.ApocalypseEntityLootTableProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.tag.*;
+import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseChunkGeneratorSettings;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseWorldPresets;
 import net.esromethestrange.esromes_apocalypse.worldgen.biome.ApocalypseBiomes;
@@ -23,6 +25,9 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(ApocalypseEnglishLanguageProvider::new);
+
+		pack.addProvider(ApocalypseBlockLootTableProvider::new);
+		pack.addProvider(ApocalypseEntityLootTableProvider::new);
 
 		pack.addProvider(ApocalypseBiomeTagProvider::new);
 		pack.addProvider(ApocalypseDamageTypeTagProvider::new);

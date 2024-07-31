@@ -30,7 +30,7 @@ public class ApocalypseTags {
 
     public static class Fluid {
         public static final TagKey<net.minecraft.fluid.Fluid> ACID = createTag("acid");
-        public static final TagKey<net.minecraft.fluid.Fluid> ACID_WATER = createTag("acidic_water");
+        public static final TagKey<net.minecraft.fluid.Fluid> CONTAMINATED_WATER = createTag("contaminated_water");
 
         private static TagKey<net.minecraft.fluid.Fluid> createTag(String name) {
             return TagKey.of(RegistryKeys.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, name));

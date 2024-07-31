@@ -24,7 +24,7 @@ public class ApocalypseChunkGeneratorSettings {
         return new ChunkGeneratorSettings(
             GenerationShapeConfig.create(-64, 384, 1, 2),
             Blocks.STONE.getDefaultState(),
-            ApocalypseFluids.ACID_WATER_BLOCK.getDefaultState(),
+            ApocalypseFluids.CONTAMINATED_WATER_BLOCK.getDefaultState(),
             DensityFunctions.createSurfaceNoiseRouter(
                     context.getRegistryLookup(RegistryKeys.DENSITY_FUNCTION),
                     context.getRegistryLookup(RegistryKeys.NOISE_PARAMETERS),

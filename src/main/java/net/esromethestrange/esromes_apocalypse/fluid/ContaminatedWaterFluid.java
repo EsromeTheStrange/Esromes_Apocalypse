@@ -5,11 +5,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.fluid.*;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -25,15 +26,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 
-public abstract class AcidWaterFluid extends FlowableFluid {
+public abstract class ContaminatedWaterFluid extends FlowableFluid {
     @Override public Fluid getFlowing() {
-        return ApocalypseFluids.ACID_WATER_FLOWING;
+        return ApocalypseFluids.CONTAMINATED_WATER_FLOWING;
     }
     @Override public Fluid getStill() {
-        return ApocalypseFluids.ACID_WATER;
+        return ApocalypseFluids.CONTAMINATED_WATER;
     }
     @Override public Item getBucketItem() {
-        return ApocalypseFluids.ACID_WATER_BUCKET;
+        return ApocalypseFluids.CONTAMINATED_WATER_BUCKET;
     }
 
     @Override
@@ -85,7 +86,7 @@ public abstract class AcidWaterFluid extends FlowableFluid {
 
     @Override
     public BlockState toBlockState(FluidState state) {
-        return ApocalypseFluids.ACID_WATER_BLOCK.getDefaultState().with(FluidBlock.LEVEL, Integer.valueOf(getBlockStateLevel(state)));
+        return ApocalypseFluids.CONTAMINATED_WATER_BLOCK.getDefaultState().with(FluidBlock.LEVEL, Integer.valueOf(getBlockStateLevel(state)));
     }
 
     @Override public boolean matchesType(Fluid fluid) { return fluid == getStill() || fluid == getFlowing(); }
@@ -114,7 +115,7 @@ public abstract class AcidWaterFluid extends FlowableFluid {
         return Optional.of(SoundEvents.ITEM_BUCKET_FILL);
     }
 
-    public static class Flowing extends AcidWaterFluid {
+    public static class Flowing extends ContaminatedWaterFluid {
         @Override
         protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
             super.appendProperties(builder);
@@ -132,7 +133,7 @@ public abstract class AcidWaterFluid extends FlowableFluid {
         }
     }
 
-    public static class Still extends AcidWaterFluid {
+    public static class Still extends ContaminatedWaterFluid {
         @Override
         public int getLevel(FluidState state) {
             return 8;

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "esromes_apocalypse:block/contaminated_dirt"
+  }
+}

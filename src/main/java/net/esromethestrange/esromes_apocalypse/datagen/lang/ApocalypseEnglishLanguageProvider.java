@@ -1,6 +1,7 @@
 package net.esromethestrange.esromes_apocalypse.datagen.lang;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
+import net.esromethestrange.esromes_apocalypse.block.ApocalypseBlocks;
 import net.esromethestrange.esromes_apocalypse.entity.ApocalypseEntityTypes;
 import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
@@ -22,10 +23,14 @@ public class ApocalypseEnglishLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup." + EsromesApocalypse.MOD_ID, "Esrome's Apocalypse");
 
+        translationBuilder.add(ApocalypseItems.CONTAMINATED_WATER_BOTTLE, "Contaminated Water Bottle");
+
         translationBuilder.add(ApocalypseItems.CORRODED_SPAWN_EGG, "Corroded Spawn Egg");
 
-        translationBuilder.add(ApocalypseFluids.ACID_WATER_BLOCK, "Acidic Water");
-        translationBuilder.add(ApocalypseFluids.ACID_WATER_BUCKET, "Bucket of Acidic Water");
+        translationBuilder.add(ApocalypseBlocks.CONTAMINATED_DIRT, "Contaminated Dirt");
+
+        translationBuilder.add(ApocalypseFluids.CONTAMINATED_WATER_BLOCK, "Contaminated Water");
+        translationBuilder.add(ApocalypseFluids.CONTAMINATED_WATER_BUCKET, "Bucket of Contaminated Water");
 
         translationBuilder.add(ApocalypseEntityTypes.CORRODED, "Corroded");
 

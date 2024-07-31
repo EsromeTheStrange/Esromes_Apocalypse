@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse;
 
+import net.esromethestrange.esromes_apocalypse.block.ApocalypseBlocks;
 import net.esromethestrange.esromes_apocalypse.entity.ApocalypseEntityTypes;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
 import net.esromethestrange.esromes_apocalypse.item.ApocalypseItemGroups;
@@ -16,6 +17,7 @@ public class EsromesApocalypse implements ModInitializer {
 	public void onInitialize() {
 		ApocalypseItemGroups.registerItemGroups();
 		ApocalypseItems.registerItems();
+		ApocalypseBlocks.registerBlocks();
 		ApocalypseFluids.registerFluids();
 
 		ApocalypseEntityTypes.registerEntities();

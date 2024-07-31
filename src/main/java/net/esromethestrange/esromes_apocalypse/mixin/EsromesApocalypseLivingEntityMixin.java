@@ -17,7 +17,7 @@ public class EsromesApocalypseLivingEntityMixin {
 
     @Inject(method = "damage", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/damage/DamageSource;isIn(Lnet/minecraft/registry/tag/TagKey;)Z",
             ordinal = 2), cancellable = true)
-    private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
+    private void esromes_apocalypse$onDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
         EntityType<?> type = ((LivingEntity)(Object)this).getType();
         if(!source.isIn(ApocalypseTags.DamageType.IS_ACID))
             return;

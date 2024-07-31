@@ -1,6 +1,7 @@
 package net.esromethestrange.esromes_apocalypse.item;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
+import net.esromethestrange.esromes_apocalypse.block.ApocalypseBlocks;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
@@ -17,7 +18,13 @@ public class ApocalypseItemGroups {
                     .displayName(Text.translatable("itemGroup." + EsromesApocalypse.MOD_ID))
                     .icon(Items.DEAD_BUSH::getDefaultStack)
                     .entries(((displayContext, entries) -> {
-                        entries.add(ApocalypseFluids.ACID_WATER_BUCKET);
+                        entries.add(ApocalypseBlocks.CONTAMINATED_DIRT);
+
+                        entries.add(ApocalypseItems.CONTAMINATED_WATER_BOTTLE);
+
+                        entries.add(ApocalypseFluids.CONTAMINATED_WATER_BUCKET);
+
+                        entries.add(ApocalypseItems.CORRODED_SPAWN_EGG);
                     }))
                     .build()
     );

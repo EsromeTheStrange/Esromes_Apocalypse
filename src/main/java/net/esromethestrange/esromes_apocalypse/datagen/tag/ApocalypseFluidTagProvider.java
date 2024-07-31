@@ -18,12 +18,12 @@ public class ApocalypseFluidTagProvider extends FabricTagProvider<Fluid> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ApocalypseTags.Fluid.ACID_WATER).add(ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING);
+        getOrCreateTagBuilder(ApocalypseTags.Fluid.CONTAMINATED_WATER).add(ApocalypseFluids.CONTAMINATED_WATER, ApocalypseFluids.CONTAMINATED_WATER_FLOWING);
 
         getOrCreateTagBuilder(ApocalypseTags.Fluid.ACID)
-                .addTag(ApocalypseTags.Fluid.ACID_WATER);
+                .addTag(ApocalypseTags.Fluid.CONTAMINATED_WATER);
 
         getOrCreateTagBuilder(FluidTags.WATER)
-                .addTag(ApocalypseTags.Fluid.ACID_WATER);
+                .addTag(ApocalypseTags.Fluid.CONTAMINATED_WATER);
     }
 }

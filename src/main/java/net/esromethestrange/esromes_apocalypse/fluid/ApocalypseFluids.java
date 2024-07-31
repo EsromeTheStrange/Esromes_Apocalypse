@@ -14,17 +14,17 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ApocalypseFluids {
-    public static FlowableFluid ACID_WATER;
-    public static FlowableFluid ACID_WATER_FLOWING;
-    public static Item ACID_WATER_BUCKET;
-    public static Block ACID_WATER_BLOCK;
+    public static FlowableFluid CONTAMINATED_WATER;
+    public static FlowableFluid CONTAMINATED_WATER_FLOWING;
+    public static Item CONTAMINATED_WATER_BUCKET;
+    public static Block CONTAMINATED_WATER_BLOCK;
 
     public static void registerFluids(){
-        ACID_WATER = Registry.register(Registries.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, "acidic_water"), new AcidWaterFluid.Still());
-        ACID_WATER_FLOWING = Registry.register(Registries.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, "acidic_water_flowing"), new AcidWaterFluid.Flowing());
-        ACID_WATER_BUCKET = Registry.register(Registries.ITEM, Identifier.of(EsromesApocalypse.MOD_ID, "acidic_water_bucket"),
-                new BucketItem(ACID_WATER, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
-        ACID_WATER_BLOCK = Registry.register(Registries.BLOCK, Identifier.of(EsromesApocalypse.MOD_ID, "acidic_water"),
-                new FluidBlock(ACID_WATER, AbstractBlock.Settings.copy(Blocks.WATER)){});
+        CONTAMINATED_WATER = Registry.register(Registries.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, "contaminated_water"), new ContaminatedWaterFluid.Still());
+        CONTAMINATED_WATER_FLOWING = Registry.register(Registries.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, "contaminated_water_flowing"), new ContaminatedWaterFluid.Flowing());
+        CONTAMINATED_WATER_BUCKET = Registry.register(Registries.ITEM, Identifier.of(EsromesApocalypse.MOD_ID, "contaminated_water_bucket"),
+                new BucketItem(CONTAMINATED_WATER, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
+        CONTAMINATED_WATER_BLOCK = Registry.register(Registries.BLOCK, Identifier.of(EsromesApocalypse.MOD_ID, "contaminated_water"),
+                new FluidBlock(CONTAMINATED_WATER, AbstractBlock.Settings.copy(Blocks.WATER)){});
     }
 }
