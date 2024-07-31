@@ -1,4 +1,4 @@
-package net.esromethestrange.esromes_apocalypse.damage;
+package net.esromethestrange.esromes_apocalypse.entity.damage;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
 import net.minecraft.entity.damage.DamageEffects;

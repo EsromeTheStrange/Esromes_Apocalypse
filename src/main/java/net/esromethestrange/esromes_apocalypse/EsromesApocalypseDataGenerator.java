@@ -1,6 +1,6 @@
 package net.esromethestrange.esromes_apocalypse;
 
-import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
+import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseModelProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.tag.*;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseWorldProvider;

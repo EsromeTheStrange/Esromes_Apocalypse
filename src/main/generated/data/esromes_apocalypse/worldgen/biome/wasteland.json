@@ -131,9 +131,15 @@
       },
       {
         "type": "minecraft:husk",
-        "maxCount": 8,
+        "maxCount": 4,
         "minCount": 4,
         "weight": 150
+      },
+      {
+        "type": "esromes_apocalypse:corroded",
+        "maxCount": 4,
+        "minCount": 4,
+        "weight": 25
       }
     ],
     "underground_water_creature": [

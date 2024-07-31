@@ -1,5 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.worldgen.biome;
 
+import net.esromethestrange.esromes_apocalypse.entity.ApocalypseEntityTypes;
 import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypsePlacedFeatures;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -18,7 +19,8 @@ public class WastelandBiome {
 
         DefaultBiomeFeatures.addCaveMobs(spawnBuilder);
         DefaultBiomeFeatures.addMonsters(spawnBuilder, 20, 0, 100, false);
-        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.HUSK, 150, 4, 8));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.HUSK, 150, 4, 4));
+        spawnBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(ApocalypseEntityTypes.CORRODED, 25, 4, 4));
 
         GenerationSettings.LookupBackedBuilder biomeBuilder =
                 new GenerationSettings.LookupBackedBuilder(context.getRegistryLookup(RegistryKeys.PLACED_FEATURE),

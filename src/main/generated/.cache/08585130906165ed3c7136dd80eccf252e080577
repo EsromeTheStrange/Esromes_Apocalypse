@@ -1,4 +1,6 @@
-// 1.21	2024-07-29T20:36:06.0651555	Esrome's Apocalypse/Tags for minecraft:entity_type
+// 1.21	2024-07-30T21:22:12.5784002	Esrome's Apocalypse/Tags for minecraft:entity_type
 8411387da151082f0d8b2667987cd3cc36dda50c data\esromes_apocalypse\tags\entity_type\acid_extra.json
 c7a54566c1b0a1eb8c04cb0e2c1ca7a9c968c94e data\esromes_apocalypse\tags\entity_type\acid_immune.json
-e2e5633d9261e4ff3f7d07edc9901471b3586a5a data\esromes_apocalypse\tags\entity_type\daytime_monsters.json
+3521deb5027c63bb6cee14f9a01bc08e661d1631 data\minecraft\tags\entity_type\undead.json
+3521deb5027c63bb6cee14f9a01bc08e661d1631 data\minecraft\tags\entity_type\zombies.json
+e908f2b73827cc8e1e1fa5498d9bad8fbd46a1fa data\esromes_apocalypse\tags\entity_type\daytime_monsters.json

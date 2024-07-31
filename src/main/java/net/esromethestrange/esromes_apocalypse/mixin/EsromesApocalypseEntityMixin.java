@@ -1,10 +1,9 @@
 package net.esromethestrange.esromes_apocalypse.mixin;
 
 import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
-import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
+import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.data.ApocalypseTags;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.registry.tag.TagKey;

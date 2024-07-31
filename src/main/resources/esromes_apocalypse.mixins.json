@@ -6,7 +6,8 @@
     "EsromesApocalypseEntityMixin",
     "EsromesApocalypseHostileEntityMixin",
     "EsromesApocalypseLivingEntityMixin",
-    "EsromesApocalypseMinecraftServerMixin"
+    "EsromesApocalypseMinecraftServerMixin",
+    "EsromesApocalypseZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

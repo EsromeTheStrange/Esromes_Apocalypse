@@ -1,6 +1,6 @@
 package net.esromethestrange.esromes_apocalypse.datagen.tag;
 
-import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
+import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.data.ApocalypseTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;

@@ -1,8 +1,10 @@
 package net.esromethestrange.esromes_apocalypse.datagen.lang;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
-import net.esromethestrange.esromes_apocalypse.damage.ApocalypseDamageTypes;
+import net.esromethestrange.esromes_apocalypse.entity.ApocalypseEntityTypes;
+import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
+import net.esromethestrange.esromes_apocalypse.item.ApocalypseItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.entity.damage.DamageType;
@@ -20,8 +22,12 @@ public class ApocalypseEnglishLanguageProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup registryLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add("itemGroup." + EsromesApocalypse.MOD_ID, "Esrome's Apocalypse");
 
+        translationBuilder.add(ApocalypseItems.CORRODED_SPAWN_EGG, "Corroded Spawn Egg");
+
         translationBuilder.add(ApocalypseFluids.ACID_WATER_BLOCK, "Acidic Water");
         translationBuilder.add(ApocalypseFluids.ACID_WATER_BUCKET, "Bucket of Acidic Water");
+
+        translationBuilder.add(ApocalypseEntityTypes.CORRODED, "Corroded");
 
         translationBuilder.add("generator." + EsromesApocalypse.MOD_ID + ".wasteland", "Wasteland");
 

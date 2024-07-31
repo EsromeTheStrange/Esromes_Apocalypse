@@ -10,7 +10,7 @@ public class ApocalypseFluidsClient {
     private static final Identifier STILL_TEXTURE = Identifier.of("minecraft:block/water_still");
     private static final Identifier FLOWING_TEXTURE = Identifier.of("minecraft:block/water_flow");
 
-    public static void clientInitialize(){
+    public static void initialize(){
         FluidRenderHandlerRegistry.INSTANCE.register(ApocalypseFluids.ACID_WATER, ApocalypseFluids.ACID_WATER_FLOWING, new SimpleFluidRenderHandler(
                 STILL_TEXTURE, FLOWING_TEXTURE, 0xa9ba5f
         ));

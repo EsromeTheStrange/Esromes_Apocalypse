@@ -2,7 +2,9 @@ package net.esromethestrange.esromes_apocalypse.item;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
 import net.esromethestrange.esromes_apocalypse.fluid.ApocalypseFluids;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -20,5 +22,9 @@ public class ApocalypseItemGroups {
                     .build()
     );
 
-    public static void registerItemGroups() { }
+    public static void registerItemGroups() {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register((itemGroup) -> itemGroup.add(
+                ApocalypseItems.CORRODED_SPAWN_EGG)
+        );
+    }
 }

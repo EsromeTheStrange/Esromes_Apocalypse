@@ -4,7 +4,9 @@
   "death.attack.acid_fluid.player": "%1$s was pushed into a pool of acid by %2$s",
   "death.attack.acid_rain": "%1$s couldn't find cover from the acid rain",
   "death.attack.acid_rain.player": "%1$s melted in the rain while fighting %2$s",
+  "entity.esromes_apocalypse.corroded": "Corroded",
   "generator.esromes_apocalypse.wasteland": "Wasteland",
   "item.esromes_apocalypse.acidic_water_bucket": "Bucket of Acidic Water",
+  "item.esromes_apocalypse.corroded_spawn_egg": "Corroded Spawn Egg",
   "itemGroup.esromes_apocalypse": "Esrome's Apocalypse"
 }
