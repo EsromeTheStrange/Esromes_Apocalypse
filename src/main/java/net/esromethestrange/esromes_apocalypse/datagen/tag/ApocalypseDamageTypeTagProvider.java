@@ -18,7 +18,7 @@ public class ApocalypseDamageTypeTagProvider extends FabricTagProvider<DamageTyp
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ApocalypseTags.DamageType.IS_ACID).add(
+        getOrCreateTagBuilder(ApocalypseTags.DamageTypes.IS_ACID).add(
                 ApocalypseDamageTypes.ACID_FLUID,
                 ApocalypseDamageTypes.ACID_RAIN
         );
@@ -28,8 +28,8 @@ public class ApocalypseDamageTypeTagProvider extends FabricTagProvider<DamageTyp
                 ApocalypseDamageTypes.ACID_RAIN
         );
 
-        getOrCreateTagBuilder(DamageTypeTags.WITCH_RESISTANT_TO).addTag(ApocalypseTags.DamageType.IS_ACID);
-        getOrCreateTagBuilder(DamageTypeTags.WITHER_IMMUNE_TO).addTag(ApocalypseTags.DamageType.IS_ACID);
+        getOrCreateTagBuilder(DamageTypeTags.WITCH_RESISTANT_TO).addTag(ApocalypseTags.DamageTypes.IS_ACID);
+        getOrCreateTagBuilder(DamageTypeTags.WITHER_IMMUNE_TO).addTag(ApocalypseTags.DamageTypes.IS_ACID);
         getOrCreateTagBuilder(DamageTypeTags.DAMAGES_HELMET).add(ApocalypseDamageTypes.ACID_RAIN);
     }
 }

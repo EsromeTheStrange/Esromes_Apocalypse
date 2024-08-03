@@ -2,23 +2,26 @@ package net.esromethestrange.esromes_apocalypse.data;
 
 import net.esromethestrange.esromes_apocalypse.EsromesApocalypse;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 
 public class ApocalypseTags {
-    public static class Biome {
-        public static final TagKey<net.minecraft.world.biome.Biome> WASTELAND_BIOMES =
-                createTag("wasteland_biomes");
-        public static final TagKey<net.minecraft.world.biome.Biome> HAS_ACID_RAIN =
-                createTag("has_acid_rain");
+    public static class Biomes {
+        public static final TagKey<Biome> WASTELAND_BIOMES = createTag("wasteland_biomes");
+        public static final TagKey<Biome> HAS_ACID_RAIN = createTag("has_acid_rain");
 
-        private static TagKey<net.minecraft.world.biome.Biome> createTag(String name) {
+        public static final TagKey<Biome> HAS_SEED_VAULT = createTag("has_structure/has_seed_vault");
+
+        private static TagKey<Biome> createTag(String name) {
             return TagKey.of(RegistryKeys.BIOME, Identifier.of(EsromesApocalypse.MOD_ID, name));
         }
     }
 
-    public static class Entity {
+    public static class Entities {
         public static final TagKey<EntityType<?>> DAYTIME_MONSTERS = createTag("daytime_monsters");
         public static final TagKey<EntityType<?>> ACID_IMMUNE = createTag("acid_immune");
         public static final TagKey<EntityType<?>> ACID_EXTRA = createTag("acid_extra");
@@ -28,19 +31,19 @@ public class ApocalypseTags {
         }
     }
 
-    public static class Fluid {
-        public static final TagKey<net.minecraft.fluid.Fluid> ACID = createTag("acid");
-        public static final TagKey<net.minecraft.fluid.Fluid> CONTAMINATED_WATER = createTag("contaminated_water");
+    public static class Fluids {
+        public static final TagKey<Fluid> ACID = createTag("acid");
+        public static final TagKey<Fluid> CONTAMINATED_WATER = createTag("contaminated_water");
 
-        private static TagKey<net.minecraft.fluid.Fluid> createTag(String name) {
+        private static TagKey<Fluid> createTag(String name) {
             return TagKey.of(RegistryKeys.FLUID, Identifier.of(EsromesApocalypse.MOD_ID, name));
         }
     }
 
-    public static class DamageType{
-        public static final TagKey<net.minecraft.entity.damage.DamageType> IS_ACID = createTag("is_acid");
+    public static class DamageTypes {
+        public static final TagKey<DamageType> IS_ACID = createTag("is_acid");
 
-        private static TagKey<net.minecraft.entity.damage.DamageType> createTag(String name){
+        private static TagKey<DamageType> createTag(String name){
             return TagKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(EsromesApocalypse.MOD_ID, name));
         }
     }

@@ -19,10 +19,10 @@ public class EsromesApocalypseLivingEntityMixin {
             ordinal = 2), cancellable = true)
     private void esromes_apocalypse$onDamage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir){
         EntityType<?> type = ((LivingEntity)(Object)this).getType();
-        if(!source.isIn(ApocalypseTags.DamageType.IS_ACID))
+        if(!source.isIn(ApocalypseTags.DamageTypes.IS_ACID))
             return;
 
-        if(type.isIn(ApocalypseTags.Entity.ACID_IMMUNE))
+        if(type.isIn(ApocalypseTags.Entities.ACID_IMMUNE))
             cir.setReturnValue(false);
     }
 
@@ -30,7 +30,7 @@ public class EsromesApocalypseLivingEntityMixin {
             ordinal = 2), argsOnly = true)
     private float modifyAmountOnDamage(float amount){
         EntityType<?> type = ((LivingEntity)(Object)this).getType();
-        if(type.isIn(ApocalypseTags.Entity.ACID_EXTRA))
+        if(type.isIn(ApocalypseTags.Entities.ACID_EXTRA))
             return amount * ACID_EXTRA_DAMAGE_MULTIPLIER;
         return amount;
     }

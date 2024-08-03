@@ -102,7 +102,7 @@ public abstract class ContaminatedWaterFluid extends FlowableFluid {
 
     @Override
     public boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return direction == Direction.DOWN && !fluid.isIn(ApocalypseTags.Fluid.ACID);
+        return direction == Direction.DOWN && !fluid.isIn(ApocalypseTags.Fluids.ACID);
     }
 
     @Override

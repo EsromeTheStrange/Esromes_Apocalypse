@@ -13,6 +13,9 @@ public class ApocalypseStructurePools {
 
     public static void bootstrap(Registerable<StructurePool> context){
         BunkerStructure.bootstrap(context);
+
+        SeedVaultStructure.bootstrap(context);
+
         DecorStructurePools.bootstrap(context);
     }
 }

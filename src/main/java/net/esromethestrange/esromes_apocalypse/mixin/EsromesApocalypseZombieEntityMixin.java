@@ -19,7 +19,7 @@ public abstract class EsromesApocalypseZombieEntityMixin {
 
     @Inject(method = "convertInWater", at = @At("HEAD"), cancellable = true)
     protected void esromes_apocalypse$onConvertInWater(CallbackInfo ci){
-        if(!((ZombieEntity)(Object)this).isSubmergedIn(ApocalypseTags.Fluid.ACID))
+        if(!((ZombieEntity)(Object)this).isSubmergedIn(ApocalypseTags.Fluids.ACID))
             return;
         this.convertTo(ApocalypseEntityTypes.CORRODED);
         ci.cancel();
@@ -27,7 +27,7 @@ public abstract class EsromesApocalypseZombieEntityMixin {
 
     @Redirect(method = "tickMovement", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/ZombieEntity;burnsInDaylight()Z"))
     protected boolean burnsInDaylightRedirect(ZombieEntity instance){
-        if(instance.getType().isIn(ApocalypseTags.Entity.DAYTIME_MONSTERS))
+        if(instance.getType().isIn(ApocalypseTags.Entities.DAYTIME_MONSTERS))
             return false;
         return burnsInDaylight();
     }

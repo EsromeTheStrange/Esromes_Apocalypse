@@ -22,6 +22,7 @@ public class ApocalypseWorldProvider extends FabricDynamicRegistryProvider {
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
 
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.TEMPLATE_POOL));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.STRUCTURE_SET));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.STRUCTURE));
 
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.DAMAGE_TYPE));

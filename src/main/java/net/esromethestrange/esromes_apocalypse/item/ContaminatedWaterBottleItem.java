@@ -30,6 +30,7 @@ public class ContaminatedWaterBottleItem extends Item {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 300));
         }
 
+        stack.decrementUnlessCreative(1, user);
         if (stack.isEmpty()) {
             return new ItemStack(Items.GLASS_BOTTLE);
         } else {

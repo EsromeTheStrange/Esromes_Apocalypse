@@ -29,7 +29,7 @@ public abstract class EsromesApocalypseMinecraftServerMixin {
     @Inject(method = "createWorlds", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/ServerWorldProperties;setInitialized(Z)V", ordinal = 0))
     private void esromes_apocalypse$createWorlds(WorldGenerationProgressListener worldGenerationProgressListener, CallbackInfo ci, @Local ServerWorld serverWorld){
         //TODO see if I can actually get the world preset instead of just the biome
-        if(!serverWorld.getBiome(saveProperties.getMainWorldProperties().getSpawnPos()).isIn(ApocalypseTags.Biome.WASTELAND_BIOMES))
+        if(!serverWorld.getBiome(saveProperties.getMainWorldProperties().getSpawnPos()).isIn(ApocalypseTags.Biomes.WASTELAND_BIOMES))
             return;
 
         //TODO Look at this code again and see if there's a better way

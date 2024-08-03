@@ -21,8 +21,8 @@ public abstract class EsromesApocalypseHostileEntityMixin {
 
     @Redirect(method = "canSpawnInDark", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/mob/HostileEntity;isSpawnDark(Lnet/minecraft/world/ServerWorldAccess;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)Z"))
     private static boolean isSpawnDarkRedirect(ServerWorldAccess world, BlockPos pos, Random random, @Local(argsOnly = true) EntityType<? extends HostileEntity> type) {
-        if( world.getBiome(pos).isIn(ApocalypseTags.Biome.WASTELAND_BIOMES) &&
-            type.isIn(ApocalypseTags.Entity.DAYTIME_MONSTERS))
+        if( world.getBiome(pos).isIn(ApocalypseTags.Biomes.WASTELAND_BIOMES) &&
+            type.isIn(ApocalypseTags.Entities.DAYTIME_MONSTERS))
                 return true;
         return isSpawnDark(world, pos, random);
     }

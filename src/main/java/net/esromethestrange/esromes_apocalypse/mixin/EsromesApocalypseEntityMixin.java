@@ -62,7 +62,7 @@ public abstract class EsromesApocalypseEntityMixin {
 
     @Inject(method = "updateWaterState", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/Entity;updateMovementInFluid(Lnet/minecraft/registry/tag/TagKey;D)Z"))
     private void updateWaterState(CallbackInfoReturnable<Boolean> cir){
-        ((Entity)(Object)this).updateMovementInFluid(ApocalypseTags.Fluid.ACID, 0);
+        ((Entity)(Object)this).updateMovementInFluid(ApocalypseTags.Fluids.ACID, 0);
     }
 
     @Unique
@@ -83,7 +83,7 @@ public abstract class EsromesApocalypseEntityMixin {
         World world = entity.getWorld();
         boolean isInAcid = false;
 
-        if(world.getBiome(entity.getBlockPos()).isIn(ApocalypseTags.Biome.HAS_ACID_RAIN) &&
+        if(world.getBiome(entity.getBlockPos()).isIn(ApocalypseTags.Biomes.HAS_ACID_RAIN) &&
                 world.getLevelProperties().isRaining() && !underCover(entity))
             isInAcid = true;
 
@@ -95,6 +95,6 @@ public abstract class EsromesApocalypseEntityMixin {
 
     @Unique
     private boolean isInAcid(){
-        return !firstUpdate && fluidHeight.getDouble(ApocalypseTags.Fluid.ACID) > 0.0;
+        return !firstUpdate && fluidHeight.getDouble(ApocalypseTags.Fluids.ACID) > 0.0;
     }
 }

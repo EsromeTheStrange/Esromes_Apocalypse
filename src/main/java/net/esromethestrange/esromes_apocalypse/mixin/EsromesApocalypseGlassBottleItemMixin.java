@@ -26,7 +26,7 @@ public abstract class EsromesApocalypseGlassBottleItemMixin {
             cancellable = true
     )
     public void esromes_apocalypse$onUse(World world, PlayerEntity user, Hand hand, CallbackInfoReturnable<TypedActionResult<ItemStack>> cir, @Local BlockPos blockPos, @Local ItemStack itemStack){
-        if(world.getFluidState(blockPos).isIn(ApocalypseTags.Fluid.CONTAMINATED_WATER))
+        if(world.getFluidState(blockPos).isIn(ApocalypseTags.Fluids.CONTAMINATED_WATER))
             cir.setReturnValue(
                     TypedActionResult.success(this.fill(itemStack, user,
                             ApocalypseItems.CONTAMINATED_WATER_BOTTLE.getDefaultStack()),

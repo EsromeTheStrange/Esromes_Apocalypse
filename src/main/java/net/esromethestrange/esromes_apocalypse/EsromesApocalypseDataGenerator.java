@@ -4,16 +4,14 @@ import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseModelProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.ApocalypseWorldProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.lang.ApocalypseEnglishLanguageProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.loot_table.ApocalypseBlockLootTableProvider;
+import net.esromethestrange.esromes_apocalypse.datagen.loot_table.ApocalypseChestLootTableProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.loot_table.ApocalypseEntityLootTableProvider;
 import net.esromethestrange.esromes_apocalypse.datagen.tag.*;
 import net.esromethestrange.esromes_apocalypse.entity.damage.ApocalypseDamageTypes;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseChunkGeneratorSettings;
 import net.esromethestrange.esromes_apocalypse.worldgen.ApocalypseWorldPresets;
 import net.esromethestrange.esromes_apocalypse.worldgen.biome.ApocalypseBiomes;
-import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseConfiguredFeatures;
-import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypsePlacedFeatures;
-import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseStructurePools;
-import net.esromethestrange.esromes_apocalypse.worldgen.structure.ApocalypseStructures;
+import net.esromethestrange.esromes_apocalypse.worldgen.structure.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -27,6 +25,7 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ApocalypseEnglishLanguageProvider::new);
 
 		pack.addProvider(ApocalypseBlockLootTableProvider::new);
+		pack.addProvider(ApocalypseChestLootTableProvider::new);
 		pack.addProvider(ApocalypseEntityLootTableProvider::new);
 
 		pack.addProvider(ApocalypseBiomeTagProvider::new);
@@ -47,6 +46,7 @@ public class EsromesApocalypseDataGenerator implements DataGeneratorEntrypoint {
 		registryBuilder.addRegistry(RegistryKeys.WORLD_PRESET, ApocalypseWorldPresets::bootstrap);
 
 		registryBuilder.addRegistry(RegistryKeys.TEMPLATE_POOL, ApocalypseStructurePools::bootstrap);
+		registryBuilder.addRegistry(RegistryKeys.STRUCTURE_SET, ApocalypseStructureSets::bootstrap);
 		registryBuilder.addRegistry(RegistryKeys.STRUCTURE, ApocalypseStructures::bootstrap);
 
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ApocalypsePlacedFeatures::bootstrap);
